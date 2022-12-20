@@ -22,6 +22,7 @@
 			btn = new Array(numberOfButtons);
 			function play(B){
 				n = btn.indexOf(B);
+				btn(n).value = letter(n);
 				console.log(n)
 			}
 		</script>
@@ -33,7 +34,7 @@
 			for(i=0; i<numberOfButtons; i++){
 				btn[i] = document.createElement("input");
 				btn[i].type = "button";
-				btn[i].value = letter[i];
+				btn[i].value = letter" ";
 				btn[i].onclick = function() {play(this)};
 				document.getElementById('puzzle').appendChild(btn[i]);
 			}
