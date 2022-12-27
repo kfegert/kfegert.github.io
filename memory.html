@@ -20,10 +20,16 @@
 			letter = Array.from("QWERTYUOPASDFGHKLZXCVBNMQWERTYUOPASDFGHKLZXCVBNM");
 			letter.sort(()=>Math.random()-0.5)
 			btn = new Array(numberOfButtons);
-			m=0
+			m=0;
+			memory = true;
 			function play(B){
 				n = btn.indexOf(B);
 				btn[n].value = letter[n];
+				if(memory){
+					memory = false;
+					
+					
+				}
 				if(letter[n]!=letter[m]){
 				      btn[m].value = " ";
 				}
