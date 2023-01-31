@@ -17,12 +17,13 @@
 		</style>
 		<script>
 			numberOfButtons = 100;
-			playArea = Array.from(numberOfButtons);
+			btn = new Array(numberOfButtons);
+			playArea = Array(numberOfButtons);
 			mines = 20;
 			for(i=0;i<numberOfButtons ; i++){
-				
-			letter.sort(()=>Math.random()-0.5)
-			btn = new Array(numberOfButtons);
+				playArea[i] = mines ? 1:0;
+			}
+			playArea.sort(()=>Math.random()-0.5);
 			function play(B){
 				n = btn.indexOf(B);
 				console.log(n)
@@ -36,7 +37,7 @@
 			for(i=0; i<numberOfButtons; i++){
 				btn[i] = document.createElement("input");
 				btn[i].type = "button";
-				btn[i].value = letter[i];
+				btn[i].value = ' ';
 				btn[i].onclick = function() {play(this)};
 				document.getElementById('puzzle').appendChild(btn[i]);
 			}
