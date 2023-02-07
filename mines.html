@@ -17,11 +17,11 @@
 		</style>
 		<script>
 			numberOfButtons = 100;
-			columns = 10;
+			columb = 10;
 			btn = new Array(numberOfButtons);
 			playArea = Array(numberOfButtons);
 			mines = 20;
-			for(i=0;i<numberOfButtons ; i++){
+			for(i= 0;i<numberOfButtons ; i++){
 				playArea[i] = mines ? 1:0;
 			}
 			playArea.sort(()=>Math.random()-0.5);
@@ -29,6 +29,10 @@
 				n = btn.indexOf(B);
 				if(playArea[n]){
 				     btn[n].value = "M"	
+				}
+				m = 0;
+				for (i=n-columb;<=n+columb; i+=columb){
+					m+=playArea[i]
 				}
 				console.log(n)
 			}
