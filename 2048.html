@@ -16,9 +16,13 @@
 			}
 		</style>
 		<script>
-			numberOfButtons = 9;
-			letter = Array.from("012345678");
-			letter.sort(()=>Math.random()-0.5)
+			numberOfButtons = 16;
+			playArea = new Array(numberOfButtons);
+			for(i=0; i<numberOfButtons; i++){
+				playArea[i] = 0;
+			}
+			playArea[8] = 2;
+			playArea.sort(()=>Math.random()-0.5)
 			btn = new Array(numberOfButtons);
 			function play(B){
 				n = btn.indexOf(B);
@@ -33,7 +37,10 @@
 			for(i=0; i<numberOfButtons; i++){
 				btn[i] = document.createElement("input");
 				btn[i].type = "button";
-				btn[i].value = letter[i];
+				if(playArea[i]) !=0){
+					btn[i].type = "button";
+				}
+				btn[i].value = playArea[i];
 				btn[i].onclick = function() {play(this)};
 				document.getElementById('puzzle').appendChild(btn[i]);
 			}
