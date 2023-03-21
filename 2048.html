@@ -3,7 +3,7 @@
 		<style>
     			#puzzle {
 				display: inline-grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(4, 1fr);
 				padding: 30vw;
 				padding-top: 10px;
 			}
@@ -28,7 +28,22 @@
 			btn = new Array(numberOfButtons);
 			function play(B){
 				n = btn.indexOf(B);
-				console.log(n)
+				if(n==1| n==2){
+				}
+				else if(n==13| n==14){
+				}
+				else if(n==7| n==11){
+				}
+				else if(n==4| n==8){
+				}
+				else{return}
+				numblankofbutton= new Array(0);
+				for(i=0; i<numberOfButtons; i++){
+				         if playGround[i]=0;
+				                 numblankofbutton=numblankofbutton.concat([i])
+				                 
+			        }	
+			        console
 			}
 		</script>
 	</head>
@@ -39,10 +54,11 @@
 			for(i=0; i<numberOfButtons; i++){
 				btn[i] = document.createElement("input");
 				btn[i].type = "button";
-				btn[i].value = playGround[i]==0 ? " " :playArea[i];
+				btn[i].value = playGround[i]==0 ? " " :playGround[i];
 				btn[i].onclick = function() {play(this)};
 				document.getElementById('puzzle').appendChild(btn[i]);
 			}
 		</script>
 	</body>
+</html>
 </html>
